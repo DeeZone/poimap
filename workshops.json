@@ -1,0 +1,170 @@
+{
+	"type" : "FeatureCollection",
+	"features" : [
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-89.689286, 39.770890]
+			},
+			"properties" : {
+				"title" : "Andrew Knight",
+				"description" : "Springfield, Montania<br />United States of America<br /><ul><li><a href=\"https://www.facebook.com/groups/778264118879720/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/720578081345414/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-81.655651, 30.332184]
+			},
+			"properties" : {
+				"title" : "Brian Davis",
+				"description" : "Jacksonville, Florida<br />United States of America<br /><ul><li><a href=\"https://www.facebook.com/groups/1494811210760818/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/1487675991476466/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [18.424055, -33.924869]
+			},
+			"properties" : {
+				"title" : "Duncan Greenwood",
+				"description" : "Cape Town, South Africa<br /><ul><li><a href=\"https://www.facebook.com/groups/playpoi.beginners.capetown.2014/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/playpoi.beyond.capetown.2014\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [103.819836, 1.352083]
+			},
+			"properties" : {
+				"title" : "Max Pagel",
+				"description" : "Singapore<br /><ul><li><a href=\"https://www.facebook.com/groups/631206496994586/\" target=\"_new\">Beginner</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-122.121512, 47.673988]
+			},
+			"properties" : {
+				"title" : "Alan Gervin",
+				"description" : "Redmond, Washington<br />United States of America<br /><ul><li><a href=\"https://www.facebook.com/poilovewashington\" taget=\"_new\">Beginner</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [9.732010, 52.375892]
+			},
+			"properties" : {
+				"title" : "Christian von Albrecht",
+				"description" : "Hannover, Germany<br /><ul><li><a href=\"https://www.facebook.com/groups/343188882514754/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/1469614563309022/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-117.6027985, 33.6351013]
+			},
+			"properties" : {
+				"title" : "Fire Euphoria vs. House of Flow",
+				"description" : "Rancho Santa Margarita<br />California, United States of America<br /><ul><li>Beginner</li><li><a href=\"https://m.facebook.com/groups/1459522867647199\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}		
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [55.3206406, 25.2873306]
+			},
+			"properties" : {
+				"title" : "Firestorm",
+				"description" : "Dubai, UAE<br /><ul><li><a href=\"https://www.facebook.com/wearefirestorm\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/wearefirestorm\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}		
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [122.2229996, -17.9636993]
+			},
+			"properties" : {
+				"title" : "Eleanor Brew",
+				"description" : "Broome, Australia<br /><ul><li><a href=\"https://m.facebook.com/groups/703926963028414?ref=bookmark\" target=\"_new\">Beginner</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}		
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [8.6252899, 53.0491982]
+			},
+			"properties" : {
+				"title" : "Doris Heinecke",
+				"description" : "Delmenhorst (Bremen)  Germany<br /><ul><li><a href=\"https://www.facebook.com/groups/686838351384348/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/1542791095944895/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}		
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [13.404954, 52.520007]
+			},
+			"properties" : {
+				"title" : "Chris Feuertanz",
+				"description" : "Berlin, Germany<br /><ul><li><a href=\"https://www.facebook.com/groups/852002171478015/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/1496513090587062/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}		
+		}
+	]
+}
