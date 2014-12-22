@@ -1,0 +1,5 @@
+# System files
+.DS_Store
+
+# Ignore configuration files that may contain sensitive information.
+*.pem
