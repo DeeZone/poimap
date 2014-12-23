@@ -83,3 +83,19 @@
 		width: 100%;
 		top: -150px;
 }
+
+#header-container #logo {
+  float: left;
+}
+#header-container #nav {
+  float: right;
+}
+.nav-item {
+  float: left;
+	font-family: sans-serif;
+	padding: 0.5em;
+	margin-top: 30%;
+}
+.nav-item a {
+  color: #ffffff;
+}
