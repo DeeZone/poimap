@@ -1,8 +1,5 @@
 			
-      L.mapbox.accessToken = 'pk.eyJ1IjoiZGVlem9uZSIsImEiOiJ3bmdJcVlnIn0.AfQscey5bQGEwZIcsvaUBQ';
-			var map = L.mapbox.map('map', 'deezone.i95knkdl');			
-			map.setView([39.26,18], 3);
-			var eventsLayer = L.mapbox.featureLayer().addTo(map);
+
       
       alert('Loading external');
 			
