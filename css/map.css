@@ -73,7 +73,7 @@
  * Forms
  */
   #event-form {
-    // display:none;
+    display:none;
     padding: 10px;
     background-color:black;
     background: rgba(0, 0, 0, 0.75);
