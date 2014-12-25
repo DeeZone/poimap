@@ -40,8 +40,8 @@
     color: #fff;
     position:relative;
     z-index: 2;
-		float: left;
-		width: 100%;
+    float: left;
+    width: 100%;
   }
   #header-container {
     background-color:black;
@@ -50,8 +50,8 @@
     position:relative;
     z-index: 1;
     float: left;
-		width: 100%;
-		top: -150px;
+    width: 100%;
+    top: -150px;
   }
   #header-container #logo {
     float: left;
@@ -60,13 +60,13 @@
     float: right;
   }
   .nav-item {
-		float: left;
-		font-family: sans-serif;
-		padding: 0.5em;
-		margin-top: 30%;
+    float: left;
+    font-family: sans-serif;
+    padding: 0.5em;
+    margin-top: 30%;
   }
 	.nav-item a {
-		color: #ffffff;
+    color: #ffffff;
 	}
 
 /**
