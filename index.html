@@ -3,37 +3,32 @@
   <head>
     <meta charset=utf-8 />
     <title>Playpoi.com Workshops</title>
-    <link rel="image_src" href="map-thumbnail.png" />
+		<link rel="image_src" href="map-thumbnail.png" />
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css' rel='stylesheet' />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <link href='css/map.css' rel='stylesheet' />
-  </head>
-  <body>
+		<link href='css/map.css' rel='stylesheet' />		
+	</head>
+	<body>
     <div class='custom-popup' id="map"></div>
-    <div class="container" id="header-hotspot">
-      <div class="container" id="header-container">
-        <div>
-          <div id="logo">
-            <a href="http://www.playpoi.com>" traget="_new">
-              <img src="http://www.playpoi.com/sites/playpoi.com/themes/playpoi/images/logo.png" height="112" width="240" border="0">
-            </a>
-          </div>
-          <div id="nav">
-            <div class="nav-item">User Name: <a href="">Nick</a></div>
-            <div class="nav-item" id="add-event"><a>Add Event</a></div>
-          </div>
-        </div>
+		<div class="container" id="header-hotspot">
+		  <div class="container" id="header-container">
+			  <div>
+				  <div id="logo"><a href="http://www.playpoi.com>" traget="_new"><img src="http://www.playpoi.com/sites/playpoi.com/themes/playpoi/images/logo.png" height="112" width="240" border="0"></a></div>
+				  <div id="nav">
+			      <div class="nav-item">User Name: <a href="">Nick</a></div>
+		        <div class="nav-item"><a href="">Add Event</a></div>
+			    </div>
+			  </div>
       </div>
-    </div>
-    <div id="event-form" class="center-div">
-      <h3>Add Event</h3>
-      <form method="post" action="http://darrendouglaslee.com/poimap-api/v1/course">
-        <input type="text" name="title" value="Title"><br />
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-    <script type="text/javascript" src="js/map.js"></script>
+		<.div>
+		<div id="event-form">
+			<form method="post" action="http://darrendouglaslee.com/api/v1/course">
+			  <input type="text" name="title" value="Title">
+			  <input type="submit" value="Submit">
+			</form>
+		</div>
+		<script type="text/javascript" src="js/map.js"></script>
   </body>
 </html>
