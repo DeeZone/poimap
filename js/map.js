@@ -34,7 +34,10 @@
         top: -150
       }, 1000);
     });
-        
+		$("#add-event a").click(function() {
+      $('#event-form').fadeIn("slow");
+    });
+
   });
 
   /**

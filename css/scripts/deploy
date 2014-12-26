@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /var/www/darrendouglaslee.com/poimap
+git pull
