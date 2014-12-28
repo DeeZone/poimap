@@ -29,8 +29,16 @@
     </div>
     <div id="event-form" class="center-div">
       <h3>Add Event</h3>
-      <form method="post" action="http://darrendouglaslee.com/poimap-api/v1/course">
+      <form method="post" action="/api/v1/course">
+        <select name="course_type">
+          <option value="poi">Poi</option>
+          <option value="staff">Staff</option>
+          <option value="hoop">Hoop</option>
+        </select><br />
         <input type="text" name="title" value="Title"><br />
+        <input type="text" name="address1" value="Address"><br />
+				<input type="text" name="city" value="City"><br />
+				<input type="text" name="coutry" value="Country"><br />
         <input type="submit" value="Submit">
       </form>
     </div>
