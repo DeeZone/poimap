@@ -9,8 +9,17 @@
   // Kickoff on document ready event
   $(document).ready(function() {
 
-    fetchJSONFile('workshops.json', function(data){
-      eventsLayer.setGeoJSON(data);
+    $.ajax({
+      url: "http://playpoi.local:9888/api/v1/map",
+      type: 'GET',
+      dataType: 'json',
+      contentType: 'application/json',
+      success: function (data) {
+        alert(JSON.stringify(data));
+      },
+      error: function(){
+        alert("Cannot get data");
+      }
     });
 
     // Map "eventsLayer" layer UI events
@@ -42,6 +51,8 @@
 
   /**
    * Gather map data from JSON file
+   *
+   * To be removed when .ajax functionality to use endpoints is complete.
    */
   function fetchJSONFile(path, callback) {
     var httpRequest = new XMLHttpRequest();
