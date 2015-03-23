@@ -10,7 +10,8 @@
   $(document).ready(function() {
 
     $.ajax({
-      url: "http://playpoi.local:9888/api/v1/map",
+      url: "http://deezone.ca/api/v1/map",
+//      url: "http://playpoi.local:9888/api/v1/map",
       type: 'GET',
       dataType: 'json',
       contentType: 'application/json',
