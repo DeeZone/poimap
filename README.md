@@ -17,6 +17,8 @@ http://maps.playpoi.com
 - Header navigation bar that sides into view when mouse is at the top of the map
 - Header contains PlayPoi logo and test links for user name and pin creation
 
+Update
+------------
 **Development**:
 - Drupal 8 site: http://deezone.ca
 - JSON endpoint: http://deezone.ca/api/v1/map
