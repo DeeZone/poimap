@@ -31,7 +31,7 @@ Update
 - Generate pins on map based on JSON data gathered from /api/v1/map
 
 
-**Up next**...
+####**Up next**
 [ ] Gather via API call to ?? for latitude / longitude values of map content type entries based on address field value
 
 
