@@ -16,7 +16,7 @@
       dataType: 'json',
       contentType: 'application/json',
       success: function (data) {
-        alert(JSON.stringify(data));
+				generatePins(data);
       },
       error: function(){
         alert("Cannot get data");
@@ -68,3 +68,64 @@
     httpRequest.open('GET', path);
     httpRequest.send();
   }
+	
+	 /**
+   * Gather map data from returned JSON endpoint call to /api/v1/map
+   */
+  function generatePins(data) {
+		
+		var geoEventData = {
+			"type" : "FeatureCollection"
+		}
+		var mapObjects = $.parseJSON(data);
+		// alert(JSON.stringify(mapObjects));
+
+    for (var eventCount in mapObjects) {
+			
+			var body = mapObjects[eventCount].body;
+			
+			geoEventData.features[eventCount] = {
+			  "type": "Feature",
+			  "geometry": {
+				  "type": "Point",
+				  "coordinates": [-89.689286, 39.770890]
+			  },
+			  "properties" : {
+				  "title": "",
+					"description": body,
+				  "marker-color" : "#f86767",
+				  "marker-size" : "large",
+				  "marker-color" : "#BE9A6B",
+				  "marker-symbol" : "circle-stroked"
+				}
+			}
+			
+
+		}
+
+		
+		// eventsLayer.setGeoJSON(data);
+	}
+	
+/*	
+	{
+	"type" : "FeatureCollection",
+	"features" : [
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-89.689286, 39.770890]
+			},
+			"properties" : {
+				"title" : "Andrew Knight",
+				"description" : "Springfield, Montania<br />United States of America<br /><ul><li><a href=\"https://www.facebook.com/groups/778264118879720/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/720578081345414/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+
+			  
+*/
