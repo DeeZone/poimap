@@ -65,9 +65,9 @@
       var latitude = mapObjects[eventCount].field_latitude;
 
       var startDate = mapObjects[eventCount].field_event_start_date;
-      startDate = new Date(start_date).toLocaleDateString("en-US");
+      startDate = new Date(startDate).toLocaleDateString("en-US");
       var endDate = mapObjects[eventCount].field_event_end_date;
-      endDate = new Date(end_date).toLocaleDateString("en-US");
+      endDate = new Date(endDate).toLocaleDateString("en-US");
 
       var body = startDate + ' - ' + endDate + "<br />" + city + ', ' + country;
 
