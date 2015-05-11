@@ -61,6 +61,7 @@
       var title = '<h1>' + mapObjects[eventCount].title + '</h1>';
       var city = mapObjects[eventCount].field_city;
       var country = mapObjects[eventCount].field_country;
+      var festivalImage = mapObjects[eventCount].field_festival_image;
       var longitude = mapObjects[eventCount].field_longitude;
       var latitude = mapObjects[eventCount].field_latitude;
 
@@ -69,7 +70,10 @@
       var endDate = mapObjects[eventCount].field_event_end_date;
       endDate = new Date(endDate).toLocaleDateString("en-US");
 
-      var body = startDate + ' - ' + endDate + "<br />" + city + ', ' + country;
+      var nid = mapObjects[eventCount].nid;
+      var detailsLink = "<a href=\"/node/" + nid + "\">Event Details</a> >>";
+
+      var body = festivalImage + "<br />" + startDate + ' - ' + endDate + "<br />" + city + ', ' + country + "<br /" + detailsLink;
 
       features[eventCount] = {
 			  "type": "Feature",
