@@ -70,24 +70,23 @@
       var endDate = mapObjects[eventCount].field_event_end_date;
       endDate = new Date(endDate).toLocaleDateString("en-US");
 
-      var nid = mapObjects[eventCount].nid;
-      var detailsLink = "<a href=\"/node/" + nid + "\">Event Details</a> >>";
-
-      var body = festivalImage + "<br />" + startDate + ' - ' + endDate + "<br />" + city + ', ' + country + "<br /" + detailsLink;
+      var path = mapObjects[eventCount].path;
+      var detailsLink = "<a href=\"http://deezone.ca" + path + "\" target=\"_new\">Event Details</a> >>";
+      var body = festivalImage + "<br />" + startDate + ' - ' + endDate + "<br />" + city + ', ' + country + "<br />" + detailsLink;
 
       features[eventCount] = {
-			  "type": "Feature",
-			  "geometry": {
-				  "type": "Point",
-				  "coordinates": [longitude, latitude]
-			  },
-			  "properties" : {
-				  "title": title,
-					"description": body,
-				  "marker-color" : "#f86767",
-				  "marker-size" : "large",
-				  "marker-color" : "#BE9A6B",
-				  "marker-symbol" : "circle-stroked"
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+           "coordinates": [longitude, latitude]
+        },
+        "properties" : {
+          "title": title,
+          "description": body,
+          "marker-color" : "#f86767",
+          "marker-size" : "large",
+          "marker-color" : "#BE9A6B",
+          "marker-symbol" : "circle-stroked"
 				}
 			}
 		}
@@ -99,22 +98,3 @@
 
     eventsLayer.setGeoJSON(geoEventData);
 	}
-
-  /**
-   * Gather map data from JSON file
-   *
-   * To be removed when .ajax functionality to use endpoints is complete.
-   */
-  function fetchJSONFile(path, callback) {
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === 4) {
-        if (httpRequest.status === 200) {
-          var data = JSON.parse(httpRequest.responseText);
-          if (callback) callback(data);
-        }
-      }
-    };
-    httpRequest.open('GET', path);
-    httpRequest.send();
-  }
