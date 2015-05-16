@@ -33,7 +33,11 @@
       }, 4000);
     });
 
-    // Navigation bar events
+    // Header / navigation bar
+
+    // UI elements
+    $( "#slider" ).slider();
+    // Events
     $("#header-hotspot").mouseenter(function() {
       $("#header-container").animate({
         top: 0
