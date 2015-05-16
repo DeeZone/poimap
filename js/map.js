@@ -6,6 +6,21 @@
   map.setView([39.26,18], 3);
   var eventsLayer = L.mapbox.featureLayer().addTo(map);
 
+  // Slider dates
+  var startDate = new Date();
+  var endDate = new Date(new Date().setYear(new Date().getFullYear() + 1))
+  var sdd = startDate.getDate();
+  var smm = startDate.getMonth() + 1; //January is 0!
+  var syyyy = startDate.getFullYear();
+  var edd = endDate.getDate();
+  var emm = endDate.getMonth() + 1;
+  var eyyyy = endDate.getFullYear()
+
+  var sliderStartDate = syyyy + "-" + smm + "-" + sdd;
+  var sliderEndDate = eyyyy + "-" + emm + "-" + edd;
+  $("#id .slider-date-start").innerHTML = sliderStartDate;
+  $("#id .slider-date-end").innerHTML = sliderEndDate;
+
   // Kickoff on document ready event
   $(document).ready(function() {
 
@@ -36,10 +51,12 @@
     // Header / navigation bar
 
     // UI elements
-    $( "#slider" ).slider({
+    $("#slider").slider({
       min: 0,
-      max: 365
+      max: 365,
+      change: function( event, ui ) {}
     });
+
     // Events
     $("#header-hotspot").mouseenter(function() {
       $("#header-container").animate({
@@ -54,6 +71,15 @@
 		$("#add-event a").click(function() {
       $('#event-form').fadeIn("slow");
     });
+    $("#slider").on(
+      "slidechange", function( event, ui ) {
+        startDate.setDate(startDate.getDate() + parseInt(ui.value));
+        var ndd = startDate.getDate();
+        var nmm = startDate.getMonth() + 1;
+        var nyyyy = startDate.getFullYear();
+        alert("New Value: " + ui.value + " days: " + nyyyy + "-" + nmm + "-" + ndd);
+      }
+    );
 
   });
   
