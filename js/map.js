@@ -36,7 +36,10 @@
     // Header / navigation bar
 
     // UI elements
-    $( "#slider" ).slider();
+    $( "#slider" ).slider({
+      min: 0,
+      max: 365
+    });
     // Events
     $("#header-hotspot").mouseenter(function() {
       $("#header-container").animate({
