@@ -69,6 +69,28 @@
     color: #ffffff;
 	}
 
+  #header-container #ui {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #slider {
+    width:40%;
+    float: left;
+    margin: 0 0 10px 10px;
+  }
+  .slider-date {
+    float: left;
+  }
+  .slider-date-start {
+    margin: 0 10px 0 0;
+  }
+  .slider-date-end {
+    margin: 0 0 0 10px;
+  }
+
 /**
  * Forms
  */
