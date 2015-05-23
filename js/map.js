@@ -6,21 +6,6 @@
   map.setView([39.26,18], 3);
   var eventsLayer = L.mapbox.featureLayer().addTo(map);
 
-  // Slider dates
-  var startDate = new Date();
-  var endDate = new Date(new Date().setYear(new Date().getFullYear() + 1))
-  var sdd = startDate.getDate();
-  var smm = startDate.getMonth() + 1; //January is 0!
-  var syyyy = startDate.getFullYear();
-  var edd = endDate.getDate();
-  var emm = endDate.getMonth() + 1;
-  var eyyyy = endDate.getFullYear()
-
-  var sliderStartDate = syyyy + "-" + smm + "-" + sdd;
-  var sliderEndDate = eyyyy + "-" + emm + "-" + edd;
-  $("#ui .slider-date-start").innerHTML = sliderStartDate;
-  $("#ui .slider-date-end").innerHTML = sliderEndDate;
-
   // Kickoff on document ready event
   $(document).ready(function() {
 
@@ -49,15 +34,24 @@
     });
 
     // Header / navigation bar
+    // Slider dates
+    var currentDate = new Date();
+    var startDate = new Date(new Date().getTime() + (86400000));
+    var endDate = new Date(new Date().getTime() + (86400000 * 365));
+
+    var sdd = ("0" + startDate.getDate()).slice(-2);
+    var smm = ("0" + (startDate.getMonth() + 1)).slice(-2);
+    var syyyy = startDate.getFullYear();
+    var edd = ("0" + endDate.getDate()).slice(-2);
+    var emm = ("0" + (endDate.getMonth() + 1)).slice(-2);
+    var eyyyy = endDate.getFullYear()
+
+    var sliderStartDate = syyyy + "-" + smm + "-" + sdd;
+    var sliderEndDate = eyyyy + "-" + emm + "-" + edd;
+    $("#ui .slider-date-end").html(sliderStartDate);
+    $("#ui .slider-date-end").html(sliderEndDate);
 
     // UI elements
-/*
-    $("#slider").slider({
-      min: 0,
-      max: 365,
-      change: function( event, ui ) {}
-    });
-*/
     // Events
     $("#header-hotspot").mouseenter(function() {
       $("#header-container").animate({
@@ -82,14 +76,10 @@
         slide: function( event, ui ) {
           $( "#amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] + " days" );
 					
-          // Slider dates
+          // Dynamic slider dates
 					var currentDate = new Date();
 					var startDate = new Date(new Date().getTime() + (86400000 * ui.values[ 0 ]));
           var endDate = new Date(new Date().getTime() + (86400000 * ui.values[ 1 ]));
-					
-					console.log("currentDate: " + currentDate);
-					console.log("startDate: " + startDate);
-					console.log("endDate: " + endDate);
 
 					var sdd = ("0" + startDate.getDate()).slice(-2);
           var smm = ("0" + (startDate.getMonth() + 1)).slice(-2);
