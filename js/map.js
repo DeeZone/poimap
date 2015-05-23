@@ -18,8 +18,8 @@
 
   var sliderStartDate = syyyy + "-" + smm + "-" + sdd;
   var sliderEndDate = eyyyy + "-" + emm + "-" + edd;
-  $("#id .slider-date-start").innerHTML = sliderStartDate;
-  $("#id .slider-date-end").innerHTML = sliderEndDate;
+  $("#ui .slider-date-start").innerHTML = sliderStartDate;
+  $("#ui .slider-date-end").innerHTML = sliderEndDate;
 
   // Kickoff on document ready event
   $(document).ready(function() {
@@ -51,12 +51,13 @@
     // Header / navigation bar
 
     // UI elements
+/*
     $("#slider").slider({
       min: 0,
       max: 365,
       change: function( event, ui ) {}
     });
-
+*/
     // Events
     $("#header-hotspot").mouseenter(function() {
       $("#header-container").animate({
@@ -71,15 +72,40 @@
 		$("#add-event a").click(function() {
       $('#event-form').fadeIn("slow");
     });
-    $("#slider").on(
-      "slidechange", function( event, ui ) {
-        startDate.setDate(startDate.getDate() + parseInt(ui.value));
-        var ndd = startDate.getDate();
-        var nmm = startDate.getMonth() + 1;
-        var nyyyy = startDate.getFullYear();
-        alert("New Value: " + ui.value + " days: " + nyyyy + "-" + nmm + "-" + ndd);
-      }
-    );
+	
+		$(function() {
+      $( "#slider" ).slider({
+        range: true,
+        min: 0,
+        max: 365,
+        values: [ 0, 365 ],
+        slide: function( event, ui ) {
+          $( "#amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] + " days" );
+					
+          // Slider dates
+					var currentDate = new Date();
+					var startDate = new Date(new Date().getTime() + (86400000 * ui.values[ 0 ]));
+          var endDate = new Date(new Date().getTime() + (86400000 * ui.values[ 1 ]));
+					
+					console.log("currentDate: " + currentDate);
+					console.log("startDate: " + startDate);
+					console.log("endDate: " + endDate);
+
+					var sdd = ("0" + startDate.getDate()).slice(-2);
+          var smm = ("0" + (startDate.getMonth() + 1)).slice(-2);
+          var syyyy = startDate.getFullYear();
+					var edd = ("0" + endDate.getDate()).slice(-2);
+          var emm = ("0" + (endDate.getMonth() + 1)).slice(-2);
+          var eyyyy = endDate.getFullYear()
+
+          var sliderStartDate = syyyy + "-" + smm + "-" + sdd;
+          var sliderEndDate = eyyyy + "-" + emm + "-" + edd;
+
+					$("#ui .slider-date-start").html(sliderStartDate);
+					$("#ui .slider-date-end").html(sliderEndDate);
+        }
+      });
+    });
 
   });
   
