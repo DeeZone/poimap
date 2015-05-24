@@ -53,17 +53,22 @@
 
     // UI elements
     // Events
-    $("#header-hotspot").mouseenter(function() {
-      $("#header-container").animate({
-        top: 0
-      }, 500);
+    $("#header-hotspot").on( "click", function() {
+      var position = $("#header-container").position();
+      console.log("position.top: " + position.top);
+      if (position.top == -150) {
+        $("#header-container").animate({
+          top: 0
+        }, 500);
+      }
+      else {
+        $("#header-container").animate({
+          top: -150
+        }, 1000);
+      }
     });
-		$("#header-hotspot").mouseleave(function() {
-      $("#header-container").animate({
-        top: -150
-      }, 1000);
-    });
-		$("#add-event a").click(function() {
+
+    $("#add-event a").click(function() {
       $('#event-form').fadeIn("slow");
     });
 	
