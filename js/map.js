@@ -2,9 +2,10 @@
  * Initalize map
  */
   L.mapbox.accessToken = 'pk.eyJ1IjoiZGVlem9uZSIsImEiOiJ3bmdJcVlnIn0.AfQscey5bQGEwZIcsvaUBQ';
-  var map = L.mapbox.map('map', 'deezone.i95knkdl');			
+  var map = L.mapbox.map('map', 'deezone.i95knkdl', { zoomControl: false });
   map.setView([39.26,18], 3);
   var eventsLayer = L.mapbox.featureLayer().addTo(map);
+  new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
 
   // Kickoff on document ready event
   $(document).ready(function() {
@@ -36,7 +37,7 @@
     // Header / navigation bar
     // Slider dates
     var currentDate = new Date();
-    var startDate = new Date(new Date().getTime() + (86400000));
+    var startDate = new Date(new Date().getTime() + (86400000 * 1));
     var endDate = new Date(new Date().getTime() + (86400000 * 365));
 
     var sdd = ("0" + startDate.getDate()).slice(-2);
@@ -48,62 +49,59 @@
 
     var sliderStartDate = syyyy + "-" + smm + "-" + sdd;
     var sliderEndDate = eyyyy + "-" + emm + "-" + edd;
-    $("#ui .slider-date-end").html(sliderStartDate);
+    $("#ui .slider-date-start").html(sliderStartDate);
     $("#ui .slider-date-end").html(sliderEndDate);
 
     // UI elements
     // Events
     $("#header-hotspot").on( "click", function() {
-      var position = $("#header-container").position();
-      console.log("position.top: " + position.top);
-      if (position.top == -150) {
-        $("#header-container").animate({
-          top: 0
-        }, 500);
-      }
-      else {
-        $("#header-container").animate({
+      $("#header-container").animate({
+        top: 0
+      }, 500);
+      $("#header-handle").css("background-color", "black");
+    });
+    $("#header-hotspot").on( "mouseleave", function() {
+      $("#header-container").animate({
           top: -150
         }, 1000);
-      }
+      $("#header-handle").css("background-color", "white");
     });
 
     $("#add-event a").click(function() {
       $('#event-form').fadeIn("slow");
     });
-	
-		$(function() {
+
+    $(function() {
       $( "#slider" ).slider({
         range: true,
         min: 0,
         max: 365,
         values: [ 0, 365 ],
         slide: function( event, ui ) {
-          $( "#amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] + " days" );
-					
+
           // Dynamic slider dates
-					var currentDate = new Date();
-					var startDate = new Date(new Date().getTime() + (86400000 * ui.values[ 0 ]));
+          var currentDate = new Date();
+          var startDate = new Date(new Date().getTime() + (86400000 * ui.values[ 0 ]));
           var endDate = new Date(new Date().getTime() + (86400000 * ui.values[ 1 ]));
 
-					var sdd = ("0" + startDate.getDate()).slice(-2);
+          var sdd = ("0" + startDate.getDate()).slice(-2);
           var smm = ("0" + (startDate.getMonth() + 1)).slice(-2);
           var syyyy = startDate.getFullYear();
-					var edd = ("0" + endDate.getDate()).slice(-2);
+          var edd = ("0" + endDate.getDate()).slice(-2);
           var emm = ("0" + (endDate.getMonth() + 1)).slice(-2);
           var eyyyy = endDate.getFullYear()
 
           var sliderStartDate = syyyy + "-" + smm + "-" + sdd;
           var sliderEndDate = eyyyy + "-" + emm + "-" + edd;
 
-					$("#ui .slider-date-start").html(sliderStartDate);
-					$("#ui .slider-date-end").html(sliderEndDate);
+          $("#ui .slider-date-start").html(sliderStartDate);
+          $("#ui .slider-date-end").html(sliderEndDate);
         }
       });
     });
 
   });
-  
+
   /**
    * Generate pin/markers on map
    */
@@ -111,7 +109,7 @@
 
     var features = [];
     for (var eventCount in mapObjects) {
-			
+
       var title = '<h1>' + mapObjects[eventCount].title + '</h1>';
       var city = mapObjects[eventCount].field_city;
       var country = mapObjects[eventCount].field_country;
