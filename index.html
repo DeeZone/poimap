@@ -16,6 +16,7 @@
   <body>
     <div class='custom-popup' id="map"></div>
     <div class="container" id="header-hotspot">
+      <div id="header-handle">vv click to open vv</div>
       <div class="container" id="header-container">
         <div>
           <div id="logo">
@@ -24,13 +25,11 @@
             </a>
           </div>
           <div id="ui">
-            <div>
-              <label for="amount" style="color: #ffffff">Events day range:</label>
-              <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            <div id="slider-ui">
+              <div class="slider-date slider-date-start"></div>
+              <div id="slider"></div>
+              <div class="slider-date slider-date-end"></div>
             </div>
-            <div class="slider-date slider-date-start"></div>
-            <div id="slider"></div>
-            <div class="slider-date slider-date-end"></div>
           </div>
           <div id="nav">
             <div class="nav-item">User Name: <a href="">Nick</a></div>
