@@ -39,9 +39,15 @@
     background: rgba(0, 0, 0, 0);
     color: #fff;
     position:relative;
-    z-index: 2;
+    z-index: 5;
     float: left;
     width: 100%;
+  }
+  #header-handle {
+    background: white;
+    color: black;
+    text-align: center;
+    z-index: 2;
   }
   #header-container {
     background-color:black;
